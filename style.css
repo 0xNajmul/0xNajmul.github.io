@@ -1,3 +1,19 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Najmul Portofolio
+    Template URI: najmul.xyz
+    Description: Portfolio Site by Najmul
+    Author: Najmul
+    Author URI: https://najmul.xyz/
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #fff;
 }
@@ -26,6 +42,26 @@ body {
 
 /* Nav Section */
 
+.header_navbar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(34, 34, 34, 0.15);
+    -moz-box-shadow: 0px 10px 25px 0px rgba(34, 34, 34, 0.15);
+    box-shadow: 0px 10px 25px 0px rgba(34, 34, 34, 0.15);
+    z-index: 99;
+    -webkit-animation: sticky 1.5s;
+    -moz-animation: sticky 1.5s;
+    -o-animation: sticky 1.5s;
+    animation: sticky 1.5s;
+}
+
+.header_navbar.sticky::before {
+    display: none;
+}
+
 #header,
 #slider {
     background-color: #f3f3f3;
@@ -49,16 +85,30 @@ nav ul li a {
 }
 
 .navbar-brand img {
-    height: 50px;
+    height: 45px;
     width: auto;
+    margin-top: 5px;
+}
+
+.sticky .navbar-brand img {
+    height: 45px;
+    width: auto;
+    margin-top: 0px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 1.5rem;
 }
 
-nav.navbar.navbar-expand-lg {
-    margin-top: 20px;
+.navbar {
+    width: 100%;
+    padding: 15px 0px;
+    transition: all 0.5s ease;
+    margin-top: 10px;
+}
+
+.sticky .navbar {
+    margin-top: 0px;
 }
 
 .contact a {
@@ -80,11 +130,28 @@ nav.navbar.navbar-expand-lg {
     color: #a7a7a7;
 }
 
+.sticky {
+    transition: all 0.3s ease;
+}
+
+.sticky nav ul li a {
+    color: #000;
+}
+
+.sticky .contact a {
+    background-color: #000;
+    padding: 10px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
 
 /* Title Section  */
 
 .title {
-    margin: 100px 0px 60px 0px;
+    margin: 120px 0px 100px 0px;
     text-align: center;
 }
 
@@ -110,6 +177,10 @@ footer .social {
     position: absolute;
     width: 100%;
     margin-top: 235px;
+}
+
+.footer_content .social a {
+    color: #fff;
 }
 
 
@@ -196,8 +267,12 @@ footer .social {
 
 .single_services {
     text-align: center;
-    border: 1px solid var(--primary-color);
+    border: 1px solid #3c3c3c;
     padding: 70px 30px;
+}
+
+.single_services:hover {
+    border-color: #000;
 }
 
 .single_services svg {
@@ -261,9 +336,20 @@ footer .social {
 
 /* Blog Section */
 
+#blog {
+    background-color: #F8F9FA;
+    padding-top: 10px;
+    padding-bottom: 130px;
+}
+
 #blog .single_blog img {
     width: 100%;
-    ;
+    border-radius: .25rem!important;
+}
+
+#blog .single_blog h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 
@@ -274,6 +360,8 @@ footer .social {
     display: block;
     overflow: hidden;
     margin-bottom: 20px;
+    padding: 11px 20px;
+    border: 1px solid #000;
 }
 
 .contact_form input[type='email'] {
@@ -281,6 +369,8 @@ footer .social {
     display: block;
     overflow: hidden;
     margin-bottom: 20px;
+    padding: 11px 20px;
+    border: 1px solid #000;
 }
 
 .contact_form textarea {
@@ -288,15 +378,34 @@ footer .social {
     display: block;
     overflow: hidden;
     margin-bottom: 20px;
+    height: 150px;
+    padding: 12px 20px;
+    border: 1px solid #000;
+}
+
+.contact_form input[type='submit'] {
+    height: 50px;
+    width: 150px;
+    background-color: #000;
+    border: 0px;
+    border-radius: 50px;
+    color: #fff;
 }
 
 .single_contact {
     display: block;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .single_contact .icon-social {
     float: left;
+    padding: 0px 25px;
+    font-size: 30px;
+}
+
+.contact_form {
+    float: right;
 }
 
 
@@ -375,4 +484,36 @@ footer .social {
         -webkit-transform: scale(1, 1);
         opacity: 0;
     }
+}
+
+
+/* Portofolio section */
+
+.all_portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.single-portfolio img {
+    height: 200px;
+    width: 330px;
+}
+
+.single-portfolio {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.isotop-button {
+    display: block;
+    overflow: hidden;
+}
+
+.isotop-button {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 31px;
 }

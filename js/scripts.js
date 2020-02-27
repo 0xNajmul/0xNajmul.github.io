@@ -56,3 +56,24 @@ $('.owl-carousel').owlCarousel({
 $(window).on('load', function(event) {
     $('#preloader').delay(500).fadeOut(500);
 });
+
+//Navbar 
+$(window).on('scroll', function(event) {
+    var scroll = $(window).scrollTop();
+    if (scroll < 110) {
+        $(".header_navbar").removeClass("sticky");
+        $(".header_navbar img").attr("src", "images/logo-rev.png");
+    } else {
+        $(".header_navbar").addClass("sticky");
+        $(".header_navbar img").attr("src", "images/logo.png");
+    }
+});
+
+
+//Isotope
+var $grid = $('.grid').isotope({
+    getSortData: {
+        catagory: '[data-category]',
+    },
+    sortBy: ['catagory']
+});
