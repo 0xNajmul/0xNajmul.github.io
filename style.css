@@ -41,7 +41,9 @@ body {
 
 
 /* Nav Section */
-
+.navbar-nav .active{
+color:#a7a7a7;
+}
 .header_navbar.sticky {
     position: fixed;
     top: 0;

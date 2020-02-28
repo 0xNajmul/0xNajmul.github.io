@@ -77,3 +77,10 @@ var $grid = $('.grid').isotope({
     },
     sortBy: ['catagory']
 });
+
+//Active Navbar
+  // Activate scrollspy to add active class to navbar items on scroll
+  $('body').scrollspy({
+    target: '.nav-item',
+    offset: 56
+  });
