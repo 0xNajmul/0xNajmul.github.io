@@ -71,12 +71,25 @@ $(window).on('scroll', function(event) {
 
 
 //Isotope
-var $grid = $('.grid').isotope({
-    getSortData: {
-        catagory: '[data-category]',
-    },
-    sortBy: ['catagory']
+$('.isotop-button').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
 });
+
+var $grid = $('.all_portfolio').isotope({
+   
+});
+
+// change is-checked class on buttons
+$('.isotop-button').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function( event ) {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    var $button = $( event.currentTarget );
+    $button.addClass('is-checked');
+  });
+});
+
 
 //Active Navbar
   // Activate scrollspy to add active class to navbar items on scroll
