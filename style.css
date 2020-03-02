@@ -368,7 +368,58 @@ footer .social {
     margin-bottom: 50px;
 }
 
-
+#clients .owl-nav .owl-prev{
+    position: absolute;
+    height: 45px;
+    left: 165px;
+    width: 45px;
+    background: transparent;
+    top: 20%;
+    font-size: 26px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+}
+#clients .owl-nav .owl-next{
+    position: absolute;
+    height: 45px;
+    right: 165px;
+    width: 45px;
+    background: transparent;
+    top: 20%;
+    font-size: 26px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+}
+#clients .owl-nav .owl-prev span{
+    position: absolute;
+    top: 0px;
+    left: 43%;
+}
+#clients .owl-nav .owl-next span{
+    position: absolute;
+    top: 0px;
+    left: 43%;
+}
+#clients .owl-dots{
+    margin-top: 30px;
+}
+#clients .owl-dots .owl-dot{
+    height:18px;
+    width:18px;
+    border: 1px solid #cccccc;
+    background: transparent;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#clients .owl-dots .active{    
+    background: #000;
+   
+}
+#clients .owl-stage p{
+    width:500px;
+    text-align: center;
+    margin: 0 auto;
+}
 /* Blog Section */
 
 #blog {
@@ -575,4 +626,7 @@ footer .social {
 .isotop-button button:active,
 .isotop-button button.is-checked {
   color: #a7a7a7;
+}
+#portfolio > div.title > p > a{
+    color:#000;
 }
