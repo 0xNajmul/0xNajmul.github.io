@@ -519,6 +519,7 @@ footer .social {
     width: 50px;
     background-color: #555;
     color: #fff;
+	border-radius:5px;
 }
 
 
@@ -605,8 +606,29 @@ footer .social {
 .single-portfolio {
 	margin-right: 20px;
     margin-bottom: 20px;
+	height: 235px;
+    width: 375px;
+	background-size: cover !important;
+    background-position: center !important;
+	border-radius:.25rem!important;
 }
-
+.single-portfolio svg {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    top: 47%;
+    position: absolute;
+    left: 45%;
+	display:none;
+}
+.single-portfolio:hover .linked_icon svg{
+	display:block;
+	cursor:pointer;
+}
+.single-portfolio:hover{
+	opacity:.9;
+}
 .isotop-button {
 	display: block;
     overflow: hidden;
@@ -629,4 +651,12 @@ footer .social {
 }
 #portfolio > div.title > p > a{
     color:#000;
+}
+.modals_ img{
+	width:100%;
+	margin-bottom:15px;
+}
+.modals_ iframe{
+	width:100%;
+	margin-bottom:15px;
 }
